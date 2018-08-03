@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Space Conquest - Workshop</title>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+        <link rel="stylesheet" type="text/css" href=<%=url("css/style.css")%>>
+          <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    </head>
+
+    <body>
+        <font color="white">
+        <nav>
+            <div class="nav-wrapper indigo darken-4">
+              <a href="/home" class="brand-logo">Space Conquest</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/starscope">Starscope</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/workshop">Workshop</a></li>
+                <li><a href="/quests">Quests</a></li>
+                <li>Energy: <%=session[:energy]%></li>
+              </ul>
+            </div>
+        </nav>
+        <h1>Workshop</h1>
+        <h3>Current Rocket Tier: <%=session[:tier]%></h3>
+        <font color=white>
+        <div>
+            <p style="float: left;"><img src="images/rocket1.png" height="30px" width="30px" border="1px"></p>
+            <h3>Makeshift Rocket (Tier 1)</h3>
+            <p>It'll get you off the ground?</p>
+            <p>Materials: 30 iron</p>
+            <form class = "" action = "/engine1" method="post">
+                <input type="submit" value="Craft">
+            </form>
+        </div>
+    
+    </body>
+
+
+</html>

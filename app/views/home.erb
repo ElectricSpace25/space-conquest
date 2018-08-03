@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Space Conquest - Home</title>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+          <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper indigo darken-4">
+              <a href="/home" class="brand-logo">Space Conquest</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/starscope">Starscope</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/workshop">Workshop</a></li>
+                <li><a href="/quests">Quests</a></li>
+                <li>Energy: <%=session[:energy]%></li>
+              </ul>
+            </div>
+        </nav>
+        
+        <h1>You are on planet <%= session[:currentplanet].capitalize %>.</h1>
+        <h6>This planet has</h6>
+        <form class = "" action = "/sleep" method="post">
+            <input type="submit" value="Sleep">
+        </form>
+        
+    
+    </body>
+
+
+</html>

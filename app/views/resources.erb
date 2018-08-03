@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+                /* The alert message box */
+        .alert {
+            padding: 20px;
+            background-color: #f44336; /* Red */
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        /* The close button */
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        /* When moving the mouse over the close button */
+        .closebtn:hover {
+            color: black;
+        }
+      </style>
+        <meta charset="utf-8">
+        <title>Space Conquest - Workshop</title>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+        <link rel="stylesheet" type="text/css" href=<%=url("css/style.css")%>>
+          <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    </head>
+
+    <body>
+        <font color="white">
+        <nav>
+            <div class="nav-wrapper indigo darken-4">
+              <a href="/home" class="brand-logo">Space Conquest</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/starscope">Starscope</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/workshop">Workshop</a></li>
+                <li><a href="/quests">Quests</a></li>
+                <li>Energy: <%=session[:energy]%></li>
+              </ul>
+            </div>
+        </nav>
+        <br>
+        <h6>Current Planet: <%=session[:currentplanet].capitalize%></h6>
+        <form class = "" action = "/wood" method="post">
+            <input type="submit" value="Chop">
+        </form>
+        <form class = "" action = "/iron" method="post">
+            <input type="submit" value="Mine">
+        </form>
+        <form class = "" action = "/clay" method="post">
+            <input type="submit" value="Dig">
+        </form>
+        <form class = "" action = "/crystal" method="post">
+            <input type="submit" value="Search">
+        </form>
+         
+        <h6>Energy: <%=session[:energy]%></h6>
+        <h6>Wood: <%=session[:wood]%></h6>
+        <h6>Iron: <%=session[:iron]%></h6>
+        <h6>Clay: <%=session[:clay]%></h6>
+        <h6>Crystals: <%=session[:crystal]%></h6>
+        
+    <!--<div class="alert">-->
+    <!--    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> -->
+    <!--    This is an alert box.-->
+    <!--</div>-->
+    
+    </body>
+
+
+</html>
