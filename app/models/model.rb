@@ -43,7 +43,7 @@ end
 def createname(tier,letters,vowels)
     name = ""
     random = rand(1)
-    ((tier / 2) + 2).times do
+    (tier + rand(2)).times do
         if random == 0
             name << (letters.sample)
             name << (vowels.sample)
@@ -55,3 +55,4 @@ def createname(tier,letters,vowels)
     end
     return name
 end
+
