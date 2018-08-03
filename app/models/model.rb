@@ -62,18 +62,18 @@ end
 def converttoambiguous(int)
     if int >= 5
         return "a lot of"
-    elsif int >= 3
+    elsif int >= 1
         return "some"
-    elsif int >= 0
+    elsif int == 0
         return "no"
         
     end
 end
 
 def oxygen(int)
-    if int >= 6
+    if int >= 5
         return "very little"
-    elsif int >=4
+    elsif int >=3
         return "some"
     else
         return "plenty of"
