@@ -22,7 +22,7 @@ def resourcechange(resource)
             session[:crystal] += session[:planets][session[:currentplanet]]["crystal"]
             session[:iron] += -2 * session[:planets][session[:currentplanet]]["iron"]
             session[:clay] += -5 * session[:planets][session[:currentplanet]]["clay"]
-            session[:energy] += -3 * session[:planets][session[:currentplanet]]["energy"]
+            session[:energy] += -3 * session[:planets][session[:currentplanet]]["energy"] 
             
         end
     else
@@ -32,18 +32,21 @@ end
 
 def createplanet(tier,letters,vowels)
     
-    session[:planets].merge!(createname(session[:tier],letters,vowels) => {
-    "energy"=>rand(0..(session[:tier] + 4)),
-    "wood"=>rand(0..(session[:tier] + 4)),
-    "iron"=>rand(0..(session[:tier] + 4)),
-    "clay"=>rand(0..(session[:tier] + 4)),
-    "crystal"=>rand(0..(session[:tier] + 3))})
+    session[:planets].merge!(
+    createname(session[:tier],letters,vowels) => {
+        "energy"=>rand(1..(session[:tier] + 4)),
+        "wood"=>rand(0..(session[:tier] + 4)),
+        "iron"=>rand(0..(session[:tier] + 4)),
+        "clay"=>rand(0..(session[:tier] + 4)),
+        "crystal"=>rand(0..(session[:tier] + 3))
+        }
+    )
 end
 
 def createname(tier,letters,vowels)
     name = ""
     random = rand(1)
-    (tier + rand(2)).times do
+    (tier + rand(2..5)).times do
         if random == 0
             name << (letters.sample)
             name << (vowels.sample)
@@ -56,3 +59,23 @@ def createname(tier,letters,vowels)
     return name
 end
 
+def converttoambiguous(int)
+    if int >= 5
+        return "a lot of"
+    elsif int >= 3
+        return "some"
+    elsif int >= 0
+        return "no"
+        
+    end
+end
+
+def oxygen(int)
+    if int >= 6
+        return "very little"
+    elsif int >=4
+        return "some"
+    else
+        return "plenty of"
+    end
+end

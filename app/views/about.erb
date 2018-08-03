@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Space Conquest - Home</title>
+        <title>Space Conquest - About</title>
         <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
         <link href="css/style.css" rel="stylesheet" type="text/css">
           <!-- Compiled and minified CSS -->
@@ -25,30 +25,24 @@
               </ul>
             </div>
         </nav>
+        
+        <h1>About</h1>
         <font color=white>
-        <h1>Home</h1>
-        <h3>You are on planet <%= session[:currentplanet].capitalize %>.</h3>
-        <h6>This planet has <%= oxygen(session[:planets][session[:currentplanet]]["energy"]+1).to_s%> oxygen.</h6>
-        <h6>This planet has <%= converttoambiguous(session[:planets][session[:currentplanet]]["wood"]).to_s%> wood.</h6>
-        <h6>This planet has <%= converttoambiguous(session[:planets][session[:currentplanet]]["iron"]).to_s%> iron.</h6>
-        <h6>This planet has <%= converttoambiguous(session[:planets][session[:currentplanet]]["clay"]).to_s%> clay.</h6>
-        <h6>This planet has <%= converttoambiguous(session[:planets][session[:currentplanet]]["crystal"]).to_s%> crystals.</h6>
-        <form class = "" action = "/sleep" method="post">
-            <input type="submit" value="Sleep">
-        </form>
+        <p>Welcome to Space Conquest!</p>
+        <p>This is an exploration game. Your goal is to upgrade your rocket so you can explore every planet!</p>
         <br>
+        <h4>Home</h4>
+        <p>Press the sleep to restore your energy and take a look at what resources the planet you are on has. (Note: The lower the oxygen, the faster your energy will deplete!)</p>
         <br>
-        <p>Links for mobile</p>
-        <a href="/home">Home</a>
+        <h4>Starscope</h4>
+        <p>Look at a list of all the available planets. They are randomly generated! Check the Workshop to see what tier you can access.</p>
         <br>
-        <a href="/starscope">Starscope</a>
+        <h4>Resources</h4>
+        <p>Gather wood, clay, iron, and crystals! Chopping wood takes energy; digging clay takes energy and wood; mining iron takes energy and clay; searching for crystals takes energy, clay, and iron (there are no crystals on earth).</p>
         <br>
-        <a href="/resources">Resources</a>
+        <h4>Workshop</h4>
+        <p>Craft new rockets to allow you to reach planets in higher tiers!.</p>
         <br>
-        <a href="/workshop">Workshop</a>
-        <br>
-        <a href="/about">About</a>
-    
     </body>
 
 

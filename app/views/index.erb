@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.sidenav');
+          var instances = M.Sidenav.init(elems, options);
+        });
+      
+        // Or with jQuery
+      
+        $(document).ready(function(){
+          $('.sidenav').sidenav();
+        });
+        
+      </script>
         <meta charset="utf-8">
         <title>Space Conquest - Home</title>
         <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
@@ -16,13 +30,12 @@
         <nav>
             <div class="nav-wrapper indigo darken-4">
               <a href="/home" class="brand-logo">Space Conquest</a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="/starscope">Starscope</a></li>
                 <li><a href="/resources">Resources</a></li>
                 <li><a href="/workshop">Workshop</a></li>
-                <li><a href="/quests">Quests</a></li>
-                <li><%=session[:energy]%></li>
+                <li><a href="/about">About</a></li>
+                <li>Energy: <%=session[:energy]%></li>
               </ul>
             </div>
         </nav>
@@ -30,6 +43,7 @@
         <h1>Hello! Welcome to Space Conquest. Click any button in the Navbar to get started.</h1>
         <font color=red>
           <h3 class="red">Please do not return to this page. It will restart everything and you will lose all your progress!</h3>
+          <a href="/home">(Mobile users click here!)</a>
         </font>
     </body>
 

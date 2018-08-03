@@ -21,24 +21,64 @@
                 <li><a href="/starscope">Starscope</a></li>
                 <li><a href="/resources">Resources</a></li>
                 <li><a href="/workshop">Workshop</a></li>
-                <li><a href="/quests">Quests</a></li>
+                <li><a href="/about">About</a></li>
                 <li>Energy: <%=session[:energy]%></li>
               </ul>
             </div>
         </nav>
-        <h1>Workshop</h1>
-        <h3>Current Rocket Tier: <%=session[:tier]%></h3>
+        <h2>Workshop</h2>
+        <h4>Current Rocket Tier: <%=session[:tier]%></h4>
+        <h4>Current Bed: +<%=session[:bed]+10%></h4>
         <font color=white>
         <div>
-            <p style="float: left;"><img src="images/rocket1.png" height="30px" width="30px" border="1px"></p>
-            <h3>Makeshift Rocket (Tier 1)</h3>
+            <p style="float: left;"><img src="images/rocket.png" height="30px" width="30px" border="1px"></p>
+            <h5>Makeshift Rocket (Tier 1)</h5>
             <p>It'll get you off the ground?</p>
             <p>Materials: 30 iron</p>
-            <form class = "" action = "/engine1" method="post">
+            <form class = "" action = "/rocket1" method="post">
                 <input type="submit" value="Craft">
             </form>
         </div>
-    
+        
+        <div>
+            <p style="float: left;"><img src="images/rocket2.png" height="30px" width="30px" border="1px"></p>
+            <h5>Decent Rocket (Tier 2)</h5>
+            <p>A decent rocket for a decent explorer.</p>
+            <p>Materials: 50 iron, 10 crystals</p>
+            <form class = "" action = "/rocket2" method="post">
+                <input type="submit" value="Craft">
+            </form>
+        </div>
+        
+         <div>
+            <p style="float: left;"><img src="images/rocket3.png" height="30px" width="30px" border="1px"></p>
+            <h5>Reliable Rocket (Tier 3)</h5>
+            <p>A sturdy rocket, built to travel the stars.</p>
+            <p>Materials: 150 iron, 30 crystals</p>
+            <form class = "" action = "/rocket3" method="post">
+                <input type="submit" value="Craft">
+            </form>
+        </div>
+        
+        
+        <div>
+            <p style="float: left;"><img src="images/blanket.png" height="30px" width="30px" border="1px"></p>
+            <h5>Blanket</h5>
+            <p>Better than nothing.</p>
+            <p>Materials: 10 wood, 10 clay.</p>
+            <form class = "" action = "/bed1" method="post">
+            <input type="submit" value="Craft">
+            </form>
+        </div>
+        <div>
+            <p style="float: left;"><img src="images/bed.png" height="30px" width="30px" border="1px"></p>
+            <h5>Cot</h5>
+            <p>It's not comfy, but it will do the trick.</p>
+            <p>Materials: 50 wood, 50 clay.</p>
+            <form class = "" action = "/bed2" method="post">
+            <input type="submit" value="Craft">
+            </form>
+        </div>
     </body>
 
 
