@@ -18,11 +18,11 @@ def resourcechange(resource)
             session[:wood] += -1 * session[:planets][session[:currentplanet]]["wood"]
         end
     elsif resource == "crystal"
-        if session[:energy] >= 3 * session[:planets][session[:currentplanet]]["energy"] && session[:clay] >= 5 * session[:planets][session[:currentplanet]]["clay"] && session[:iron] >= 2 * session[:planets][session[:currentplanet]]["iron"]
+        if session[:energy] >= 4 * session[:planets][session[:currentplanet]]["energy"] && session[:clay] >= 5 * session[:planets][session[:currentplanet]]["clay"] && session[:iron] >= 2 * session[:planets][session[:currentplanet]]["iron"]
             session[:crystal] += session[:planets][session[:currentplanet]]["crystal"]
             session[:iron] += -2 * session[:planets][session[:currentplanet]]["iron"]
             session[:clay] += -5 * session[:planets][session[:currentplanet]]["clay"]
-            session[:energy] += -3 * session[:planets][session[:currentplanet]]["energy"] 
+            session[:energy] += -4 * session[:planets][session[:currentplanet]]["energy"] 
             
         end
     else
